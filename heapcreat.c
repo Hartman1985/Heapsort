@@ -36,7 +36,7 @@ void main(){
 	int Array[9] = {2,9,8,5,4,3,6,1,7};
 	//int wurzel = sqrt(max);
 
-	printf("Vorher:");	
+	printf("Vorher: \t");	
 	for (int i = 0; i < laenge ; i++)
 		     {     
 		     printf("%d, ", Array[i]);
@@ -44,7 +44,7 @@ void main(){
 		     }
 	printf("\n");
 	heapmax(Array,laenge,durchlauf);
-	printf("Danach:");
+	printf("Danach: \t");
 	for (int i = 0; i < laenge; i++)
                      {
                      printf("%d, ", Array[i]);
