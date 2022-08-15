@@ -51,8 +51,8 @@ void sortieren (int Array[], int laenge,int laenge2)
 
 		
 		temp1=Array[0];				//Tascuh des höchsten wertes mit der letzten stelle des Array
-		temp2=Array[laenge];
-		Array[laenge]=temp1;
+		temp2=Array[laenge-1];
+		Array[laenge-1]=temp1;
 		Array[0]=temp2;
 		
 		
@@ -81,15 +81,11 @@ void sortieren (int Array[], int laenge,int laenge2)
 			Array[rechteskind]=temp2;
 		}
 		
-		/*temp1=Array[0];
-		temp2=Array[laenge-2];
-		Array[laenge-2]=temp1;
-		Array[0]=temp2;*/
 	}
 }
 void main(){
 	int laenge,temp1,temp2,durchlaufakt=0;
-	int Array[9] = {1,9,28,2,42,23,36,111,17};
+	int Array[9] = {30,2,28,112,422,233,346,1511,167};
 	
 	laenge=sizeof(Array)/sizeof(Array[0]);
 	printf("Vorher: \t");	
@@ -118,16 +114,10 @@ void main(){
 	}
 	printf("\n");
 	for(int i=0;i<laenge-1/2-1;i++){	
-	sortieren(Array,laenge-1-i,8);
+	sortieren(Array,laenge-i,8);
 	
 	}	
 
-	/*temp1=Array[0];
-	temp2=Array[1];
-	Array[0]=temp2;
-	Array[1]=temp1;*/
-
-	
 	printf("Danach: \t");
 	for (int i = 0; i < laenge; i++)	//Schleife für weidergabe des Array nach Heap generierung
                      {
